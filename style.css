@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-@-ms-viewport{
-  width: device-width;
-}
-
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 0;
@@ -13,14 +9,15 @@ body {
   background: whitesmoke;
 }
 
+/* Edges around the content */
+
 .background {
-  z-index: 0;
-  padding: 10;
+  padding: .4em 1em;
 }
 
 header, footer {
   background-color: #800020;
-  padding: 8px 0px;
+  padding: 4px 0;
   top: 0;
   left: 0;
   margin: 0;
@@ -28,11 +25,15 @@ header, footer {
   text-align: center;
 }
 
+/* Text in the header */
+
 #title {
-  font: 400 6vw "EB Garamond";
+  font: 400 5vw "EB Garamond";
   font-style: italic;
   text-shadow: 3px 3px 10px black;
 }
+
+/* Backdrop for all the content */
 
 .container {
   display: flex;
@@ -42,7 +43,7 @@ header, footer {
   min-height: 100vh;
   height: auto;
   background-color: rgb(255, 250, 243);
-  margin: 50 0;
+  margin: 50px 0;
   align-items: center;
   border-radius: 30px;
   border-top: 12px solid hsl(345, 100%, 32%);
@@ -51,60 +52,36 @@ header, footer {
   box-shadow: 5px 5px 10px grey;
 }
 
-@media screen and (max-width: 425px) {
-  .container {
-    margin: 20px 0;
-}
-}
+/* Fades in the content of the entire page */
 
 .container, .headings-first, .headings-second {
   animation: fadein 3s;
 }
 
 @keyframes fadein {
-  from {transform: translateY(200px); opacity: 0};
-  to {transform: translateY(0px); opacity: 1};
+  from {
+    transform: translateY(200px);
+    opacity: 0
+  }
+  ;
+  to {
+    transform: translateY(0px);
+    opacity: 1
+  }
+  ;
 }
+
+/* Text */
 
 .first, .second, .portfolio {
   padding: 15px;
   width: 60%;
 }
-  @media screen and (max-width: 2560px) {
-    .first, .second, .portfolio {
-      font-size: 2.4vw;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .first, .second, .portfolio {
-    font-size: 2.8vw;
-}
-}
-
-@media screen and (max-width: 425px) {
-  .first, .second, .portfolio {
-    font-size: 5vw;
-}
-}
-
-.first {
-  text-align: right;
-}
-
-.second {
-  text-align: left;
-}
 
 .outro {
   width: 100%;
   font-size: 2.4vw;
-}
-
-@media screen and (max-width: 425px) {
-  .outro {
-    font-size: 4vw;
-}
+  padding: 5%;
 }
 
 .portfolio {
@@ -113,66 +90,81 @@ header, footer {
   width: 100%;
 }
 
+/* This aligns the text to the right of the photo, i.e. the right side is flattened */
+
+.first {
+  padding: 30px 0;
+  text-align: right;
+}
+
+/* Left side flattened */
+
+.second {
+  text-align: left;
+}
+
+/* Images */
+
 .photos {
   width: 25vw;
   height: auto;
   padding: 10;
 }
 
+/* Some photos have different original sizes, hence the need for more specific markup */
+
 img {
   height: auto;
   width: 25vw;
   border-radius: 3px;
+  padding: 2% 0;
 }
 
 .profile {
-  width: 37vw;
-}
-
-@media screen and (max-width: 1024px) {
-  .profile {
-    width: 30vw;
-}
+  padding: 2%;
+  width: 34vw;
 }
 
 .logo {
   padding-left: 0;
 }
 
+/* These are for the headers on top of every content container */
+
 .headings-first, .headings-second {
-  font-size: 2.7vw;
-  padding: 1 1 0 0;
+  font-size: 2.4vw;
   display: block;
   background: hsl(345, 100%, 32%);
-  width: 25%;
+  width: 33%;
   border-radius: 20px 20px 0px 0px;
   color: white;
   text-align: center;
 }
-  @media screen and (max-width: 2560px) {
-    .headings-first, .headings-second {
-    font-size: 2.2vw;
-  }
-}
+
+/* Like the text in the container, the text aligns opposite the photo */
 
 .headings-first {
   float: left;
-  margin: 0 25 0 50;
+  margin: 0 25px 0 50px;
 }
 
 .headings-second {
-float: right;
-margin: 0 50 0 25;
+  float: right;
+  margin: 0 50px 0 25px;
 }
+
+/* Keywords are selected in spans with this class and are words that deserve emphasis in the content */
 
 .keyword {
   color: #800020;
   font-style: italic;
 }
 
+/* These are the gifs in the portfolio section */
+
 .animate img {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .animated {
@@ -181,25 +173,19 @@ justify-content: center;
   padding: 20px;
   text-align: center;
 }
-@media screen and (max-width: 425px) {
-  .animated {
-    width: 20vw;
-    padding: 10px 0px;
-}
-}
+
+/* Footer and navbar */
 
 footer {
   padding: 20 0;
   margin: 0;
-  font-size: 1.5vw;
-  letter-spacing: 1px;
+  font-size: 2vw;
+  letter-spacing: 2px;
   text-align: center;
 }
 
-@media screen and (max-width: 425px) {
-  footer{
-    font-size: 2vw;
-}
+ul {
+  padding-inline-start: 0;
 }
 
 .navbar {
@@ -208,29 +194,65 @@ footer {
   justify-content: space-evenly;
 }
 
-.navbar a {
+.navbar li, .navbar a {
   text-decoration: none;
-  font-size: 1.3vw;
-  padding: 15px;
   background-color: transparent;
   color: white;
 }
 
-@media screen and (max-width: 425px) {
-  .navbar a {
-    font-size: 1.8vw;
-    padding: 0px 20%;
-}
+/* Media queries */
+
+@media screen and (max-width: 2560px) {
+  .headings-first, .headings-second {
+    font-size: 2.2vw;
+  }
+  .first, .second, .portfolio {
+    font-size: 2.4vw;
+  }
 }
 
-/* @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .headings-first, .headings-second {
-      color: black !important;
-    }
-    header, footer{
-      float: none;
-    }
-} */
+@media screen and (max-width: 1024px) {
+  .background {
+    padding: 0 1em;
+  }
+  .container {
+    margin: 25px 0;
+  }
+  .first, .second, .portfolio {
+    font-size: 2.8vw;
+  }
+  #naam {
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    margin: 20px 0;
+  }
+  .headings-first, .headings-second {
+    width: 50%;
+  }
+  .animated {
+    width: 20vw;
+    padding: 10px 0px;
+  }
+  h3 {
+    font-size: 3.5vw;
+  }
+  .outro {
+    padding: 30px;
+  }
+  .first {
+    padding: 30px 0;
+  }
+  .first, .second, .portfolio {
+    font-size: 5vw;
+  }
+  footer {
+    font-size: 4vw;
+  }
+  .navbar li, .navbar a {
+    font-size: inherit;
+  }
+}
