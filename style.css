@@ -36,8 +36,9 @@ header, footer {
 /* Backdrop for all the content */
 
 .container {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  justify-content: center;
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
@@ -71,18 +72,21 @@ header, footer {
   ;
 }
 
-/* Text */
+/* This aligns the text to the right of the photo, i.e. the right side is flattened */
 
-.first, .second, .portfolio {
-  padding: 15px;
-  width: 60%;
+.first {
+  padding: 20px 20px 20px 0;
+  text-align: right;
 }
 
-.outro {
-  width: 100%;
-  font-size: 2.4vw;
-  padding: 5%;
+/* Left side flattened */
+
+.second {
+  padding: 0 0 0 20px;
+  text-align: left;
 }
+
+/* Text in the portfolio and outro sections*/
 
 .portfolio {
   margin-top: 0;
@@ -90,17 +94,11 @@ header, footer {
   width: 100%;
 }
 
-/* This aligns the text to the right of the photo, i.e. the right side is flattened */
-
-.first {
-  padding: 30px 0;
-  text-align: right;
-}
-
-/* Left side flattened */
-
-.second {
-  text-align: left;
+.outro {
+  width: 100%;
+  height: auto;
+  font-size: 2.4vw;
+  padding: 20px;
 }
 
 /* Images */
@@ -108,7 +106,12 @@ header, footer {
 .photos {
   width: 25vw;
   height: auto;
-  padding: 10;
+  padding: 10px;
+  margin: 10%;
+}
+
+.grad {
+  margin-left: 30%;
 }
 
 /* Some photos have different original sizes, hence the need for more specific markup */
@@ -125,7 +128,7 @@ img {
   width: 34vw;
 }
 
-.logo {
+#logos {
   padding-left: 0;
 }
 
@@ -172,6 +175,7 @@ img {
   height: auto;
   padding: 20px;
   text-align: center;
+  margin: auto;
 }
 
 /* Footer and navbar */
