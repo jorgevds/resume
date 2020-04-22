@@ -232,10 +232,33 @@ ul {
 
 @media screen and (max-width: 425px) {
   .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     margin: 20px 0;
   }
   .headings-first, .headings-second {
-    width: 50%;
+    width: 75%;
+    justify-content: center;
+  }
+  img {
+    margin: auto;
+    grid-area: 1/1;
+    width: 100%;
+  }
+  .photos {
+    margin: auto;
+    padding: 0;
+    width: auto;
+  }
+  .grad {
+    width: 60vw;
+    margin: auto;
+    padding: 0;
+  }
+  .profile {
+    width: 60vw;
+    margin: 0;
+    padding: 20px 0 0 0;
   }
   .animated {
     width: 20vw;
@@ -247,14 +270,16 @@ ul {
   .outro {
     padding: 30px;
   }
-  .first {
-    padding: 30px 0;
-  }
   .first, .second, .portfolio {
+    padding: 20px;
     font-size: 5vw;
+    text-align: center;
+  }
+  #title {
+    font-size: 6vw;
   }
   footer {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   .navbar li, .navbar a {
     font-size: inherit;
