@@ -56,12 +56,12 @@ header, footer {
 /* Fades in the content of the entire page */
 
 .container, .headings-first, .headings-second {
-  animation: fadein 3s;
+  animation: fadein 1.5s;
 }
 
 @keyframes fadein {
   from {
-    transform: translateY(200px);
+    transform: translateY(50px);
     opacity: 0
   }
   ;
