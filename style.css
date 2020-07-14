@@ -28,7 +28,7 @@ header, footer {
 /* Text in the header */
 
 #title {
-  font: 400 5vw "EB Garamond";
+  font: 400 4vw "EB Garamond";
   font-style: italic;
   text-shadow: 3px 3px 10px black;
 }
