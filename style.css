@@ -28,7 +28,7 @@ header, footer {
 /* Text in the header */
 
 #title {
-  font: 400 3rem "EB Garamond";
+  font: 400 3rem "EB Garamond", serif;
   font-style: italic;
   text-shadow: 3px 3px 10px black;
 }
@@ -219,5 +219,25 @@ ul {
   }
   .portfolio-img {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .portfolio-img {
+    position: relative;
+  }
+  .portfolio-img::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(345, 100%, 32%);
+    background: hsl(345, 100%, 32%);
+  }
+  .portfolio-img:hover {
+    background-color: transparent;
   }
 }
