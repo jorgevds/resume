@@ -28,7 +28,7 @@ header, footer {
 /* Text in the header */
 
 #title {
-  font: 400 4vw "EB Garamond";
+  font: 400 3rem "EB Garamond";
   font-style: italic;
   text-shadow: 3px 3px 10px black;
 }
@@ -40,7 +40,7 @@ header, footer {
   justify-content: space-between;
   width: 100%;
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   height: auto;
   background-color: rgb(255, 250, 243);
   margin: 50px 0;
@@ -90,42 +90,29 @@ header, footer {
 /* Text in the portfolio and outro sections*/
 
 .portfolio {
-  margin-top: 0;
+  margin: 24px 0;
   text-align: center;
   width: 100%;
 }
 
-.outro {
-  width: 100%;
-  height: auto;
-  font-size: 2.4vw;
-  padding: 20px;
-}
-
 /* Images */
-
-.photos {
-  width: 25vw;
-  height: auto;
-  margin: 10%;
-}
 
 /* Some photos have different original sizes, hence the need for more specific markup */
 
 img {
   height: auto;
   width: 25vw;
-  border-radius: 3px;
-  padding: 2% 0;
+  border: 1px solid hsl(345, 100%, 32%);
+  margin: 3rem;
 }
 
 .profile {
-  padding: 2%;
-  width: 34vw;
+  width: 30vw;
 }
 
 #logos {
-  padding-left: 0;
+  border: none;
+  /* margin: 5rem; */
 }
 
 /* These are for the headers on top of every content container */
@@ -165,15 +152,10 @@ img {
 /* These are the gifs in the portfolio section 
 These lines still apply, but I've since replaced the gifs with still images for performance reasons */
 
-.animate img {
-  display: flex;
-  justify-content: center;
-}
-
 .animated {
-  min-width: 85vw;
+  min-width: 75vw;
   height: auto;
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
   margin: auto;
 }
