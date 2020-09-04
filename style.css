@@ -40,7 +40,7 @@ header, footer {
   justify-content: space-between;
   width: 100%;
   max-width: 100%;
-  min-height: 90vh;
+  min-height: 80vh;
   height: auto;
   background-color: rgb(255, 250, 243);
   margin: 50px 0;
@@ -71,12 +71,22 @@ header, footer {
   ;
 }
 
-/* This aligns the text to the right of the photo, i.e. the right side is flattened */
+figure {
+  margin: 16px;
+}
+
+/* Text */
+
+.first, .second, .portfolio-text {
+  font-size: 1.8rem;
+  margin: auto;
+}
+
+/* Right side flattened */
 
 .first {
   padding: 20px 20px 20px 0;
   text-align: right;
-  margin: auto;
 }
 
 /* Left side flattened */
@@ -84,20 +94,20 @@ header, footer {
 .second {
   padding: 0 0 0 20px;
   text-align: left;
-  margin: auto;
 }
 
-/* Text in the portfolio and outro sections*/
-
-.portfolio {
+.portfolio-text {
   margin: 24px 0;
   text-align: center;
   width: 100%;
 }
 
-/* Images */
+.keyword {
+  color: #800020;
+  font-style: italic;
+}
 
-/* Some photos have different original sizes, hence the need for more specific markup */
+/* Images */
 
 img {
   height: auto;
@@ -112,10 +122,16 @@ img {
 
 #logos {
   border: none;
-  /* margin: 5rem; */
 }
 
-/* These are for the headers on top of every content container */
+.portfolio-img {
+  display: flex;
+  width: 75%;
+  height: auto;
+  margin: auto;
+}
+
+/* Headers on top of container */
 
 .headings-first, .headings-second {
   display: block;
@@ -124,13 +140,8 @@ img {
   border-radius: 20px 20px 0px 0px;
   color: white;
   text-align: center;
+  font-size: 1rem;
 }
-
-.headings-first h2, .headings-second h2 {
-  font-size: 2rem;
-}
-
-/* Like the text in the container, the text aligns opposite the photo */
 
 .headings-first {
   float: left;
@@ -142,30 +153,12 @@ img {
   margin: 0 50px 0 25px;
 }
 
-/* Keywords are selected in spans with this class and are words that deserve emphasis in the content */
-
-.keyword {
-  color: #800020;
-  font-style: italic;
-}
-
-/* These are the gifs in the portfolio section 
-These lines still apply, but I've since replaced the gifs with still images for performance reasons */
-
-.animated {
-  min-width: 75vw;
-  height: auto;
-  /* padding: 20px; */
-  text-align: center;
-  margin: auto;
-}
-
 /* Footer and navbar */
 
 footer {
   padding: 20 0;
   margin: 0;
-  font-size: 2vw;
+  font-size: 1rem;
   letter-spacing: 2px;
   text-align: center;
 }
@@ -188,81 +181,43 @@ ul {
 
 /* Media queries */
 
-@media screen and (max-width: 2560px) {
-  .headings-first, .headings-second {
-    font-size: 2.2vw;
-  }
-  .first, .second, .portfolio {
-    font-size: 2.4vw;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .background {
-    padding: 0 1em;
-  }
-  .container {
-    margin: 25px 0;
-  }
-  .first, .second, .portfolio {
-    font-size: 2.8vw;
-  }
-  #naam {
-    padding: 2em;
-  }
-}
-
 @media screen and (max-width: 425px) {
+  footer {
+    font-size: .8rem;
+  }
   .container {
     flex-direction: column;
     margin: 20px 0;
+    border-radius: 0;
+  }
+  .first, .second, .portfolio-text {
+    padding: 20px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .portfolio-text {
+    padding: 0;
+  }
+  #title {
+    font-size: 2rem;
   }
   .headings-first, .headings-second {
-    width: 75%;
+    width: 100%;
+    margin: auto;
     justify-content: center;
   }
   img {
     margin: auto;
-    grid-area: 1/1;
     width: 100%;
   }
-  .photos {
-    margin: auto;
-    padding: 0;
-    width: auto;
-  }
   .grad {
-    width: 60vw;
-    margin: auto;
-    padding: 0;
+    width: 80vw;
+    margin: 12px;
   }
   .profile {
-    width: 60vw;
-    margin: 0;
-    padding: 20px 0 0 0;
+    width: 80vw;
   }
-  .animated {
-    width: 20vw;
-    padding: 10px 0px;
-  }
-  h2 {
-    font-size: 3.5vw;
-  }
-  .outro {
-    padding: 30px;
-  }
-  .first, .second, .portfolio {
-    padding: 20px;
-    font-size: 5vw;
-    text-align: center;
-  }
-  #title {
-    font-size: 6vw;
-  }
-  footer {
-    font-size: 3.5vw;
-  }
-  .navbar li, .navbar a {
-    font-size: inherit;
+  .portfolio-img {
+    width: 100%;
   }
 }
