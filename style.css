@@ -18,8 +18,6 @@ body {
 header, footer {
   background-color: #800020;
   padding: 4px 0;
-  top: 0;
-  left: 0;
   margin: 0;
   color: white;
   text-align: center;
@@ -166,7 +164,7 @@ img {
 /* Footer and navbar */
 
 footer {
-  padding: 20 0;
+  padding: 8px 0;
   margin: 0;
   font-size: 1rem;
   letter-spacing: 2px;
