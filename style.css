@@ -75,6 +75,12 @@ figure {
   margin: 24px;
 }
 
+figure a {
+  display: flex;
+  width: 75%;
+  margin: auto;
+}
+
 /* Text */
 
 .first, .second, .portfolio-text {
@@ -126,7 +132,7 @@ img {
 
 .portfolio-img {
   display: flex;
-  width: 75%;
+  width: 100%;
   height: auto;
   margin: auto;
 }
