@@ -113,6 +113,10 @@ figure a {
   font-style: italic;
 }
 
+.img-title {
+  display: none;
+}
+
 /* Images */
 
 img {
@@ -185,16 +189,28 @@ ul {
   color: white;
 }
 
-/* Media queries */
+/* Media queries: responsive for mobile */
 
 @media screen and (max-width: 425px) {
-  footer {
-    font-size: .8rem;
-  }
   .container {
     flex-direction: column;
     margin: 20px 0;
     border-radius: 0;
+    border-bottom: 12px solid hsl(345, 100%, 32%);
+  }
+  img {
+    margin: auto;
+    width: 90%;
+  }
+  .grad {
+    width: 80vw;
+    margin: 12px;
+  }
+  .profile {
+    width: 80vw;
+  }
+  .portfolio-img {
+    width: 100%;
   }
   .first, .second, .portfolio-text {
     padding: 20px;
@@ -212,18 +228,90 @@ ul {
     margin: auto;
     justify-content: center;
   }
-  img {
-    margin: auto;
-    width: 100%;
+  footer {
+    font-size: .8rem;
   }
-  .grad {
-    width: 80vw;
-    margin: 12px;
+}
+
+/* Media queries: hover effect on the portfolio gallery */
+
+@media screen and (min-width: 900px) {
+  figure a {
+    position: relative;
+    display: block;
+    transition: width .7s ease;
+  }
+  figure a::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    background: hsla(0, 0%, 0%, 0.712);
+    opacity: 1;
+    transition: all .5s ease;
+  }
+  figure a::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    border: 1px solid white;
+    opacity: 1;
+  }
+  figure a:hover::before {
+    width: 0%;
+    left: 100%;
+    transition: all .5s ease;
+  }
+  figure a:hover {
+    width: 77%;
+    transition: all .6s ease;
+  }
+  .img-title {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    transition: opacity .5s ease;
+  }
+  figure a:hover .img-title, figure a:hover::after {
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+}
+
+/* Media queries: 4K */
+
+@media screen and (min-width: 2560px) {
+  section {
+    width: 50vw;
+    max-width: 50vw;
+    flex-direction: column;
+    margin: auto;
+  }
+  .container {
+    min-height: 30vw;
+  }
+  .headings-first, .headings-second {
+    margin: 0;
+  }
+  .headings-first {
+    margin-left: 2rem;
+  }
+  .headings-second {
+    margin-right: 2rem;
+  }
+  img {
+    width: 15vw;
   }
   .profile {
-    width: 80vw;
-  }
-  .portfolio-img {
-    width: 100%;
+    width: 20vw;
   }
 }
