@@ -189,7 +189,7 @@ ul {
 
 /* Media queries: responsive for mobile */
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
   .container {
     flex-direction: column;
     margin: 20px 0;
@@ -261,9 +261,8 @@ ul {
     opacity: 1;
   }
   figure a:hover::before {
-    width: 0%;
-    left: 100%;
-    transition: all .5s ease;
+    opacity: 0;
+    transition: opacity .5s ease;
   }
   figure a:hover {
     width: 77%;
