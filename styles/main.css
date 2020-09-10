@@ -23,12 +23,21 @@ header, footer {
   text-align: center;
 }
 
-/* Text in the header */
-
-#title {
-  font: 400 3rem "EB Garamond", serif;
+header {
+  font: 100 1.5rem "EB Garamond", serif;
+  letter-spacing: 1px;
   font-style: italic;
   text-shadow: 3px 3px 10px black;
+}
+
+/* Text in the header */
+
+.title {
+  margin-bottom: 0;
+}
+
+.subtitle {
+  margin-top: 0;
 }
 
 /* Backdrop for all the content */
@@ -82,7 +91,7 @@ figure a {
 /* Text */
 
 .first, .second, .portfolio-text {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: auto;
 }
 
@@ -122,6 +131,7 @@ img {
   width: 25vw;
   border: 1px solid hsl(345, 100%, 32%);
   margin: 3rem;
+  transition: border .5s ease;
 }
 
 .profile {
@@ -218,13 +228,14 @@ ul {
   .portfolio-text {
     padding: 0;
   }
-  #title {
-    font-size: 2rem;
+  header {
+    font-size: 1rem;
   }
   .headings-first, .headings-second {
     width: 100%;
     margin: auto;
     justify-content: center;
+    font-size: .9rem;
   }
   footer {
     font-size: .8rem;
@@ -267,6 +278,10 @@ ul {
   figure a:hover {
     width: 77%;
     transition: all .6s ease;
+  }
+  figure a:hover img {
+    border: 1px solid whitesmoke;
+    transition: border .5s ease;
   }
   .img-title {
     display: block;
