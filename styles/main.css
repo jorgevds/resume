@@ -42,15 +42,19 @@ header {
 
 /* Backdrop for all the content */
 
+body {
+  margin: auto;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
   max-width: 100%;
   min-height: 80vh;
   height: auto;
   background-color: rgb(255, 250, 243);
-  margin: 50px 0;
+  margin: 50px auto;
   align-items: center;
   border-radius: 30px;
   border-top: 12px solid hsl(345, 100%, 32%);
@@ -155,6 +159,7 @@ img {
   display: block;
   background: hsl(345, 100%, 32%);
   width: 33%;
+  margin: 0;
   border-radius: 20px 20px 0px 0px;
   color: white;
   text-align: center;
@@ -163,12 +168,12 @@ img {
 
 .headings-first {
   float: left;
-  margin: 0 25px 0 50px;
+  margin-left: 5rem;
 }
 
 .headings-second {
   float: right;
-  margin: 0 50px 0 25px;
+  margin-right: 5rem;
 }
 
 /* Footer and navbar */
@@ -201,6 +206,7 @@ ul {
 
 @media screen and (max-width: 500px) {
   .container {
+    width: 100%;
     flex-direction: column;
     margin: 20px 0;
     border-radius: 0;
