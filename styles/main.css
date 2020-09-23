@@ -254,7 +254,7 @@ ul {
   figure a {
     position: relative;
     display: block;
-    transition: width .7s ease;
+    transition: transform .7s ease;
   }
   figure a::before {
     content: '';
@@ -282,7 +282,7 @@ ul {
     transition: opacity .5s ease;
   }
   figure a:hover {
-    width: 77%;
+    transform: scale(1.03);
     transition: all .6s ease;
   }
   figure a:hover img {
