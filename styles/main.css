@@ -271,11 +271,11 @@ ul {
     font-size: 1rem;
   }
   .headings-first, .headings-second {
-    width: 100%;
+    width: 102%;
     margin: auto;
     justify-content: center;
     font-size: .9rem;
-    transform: translate(0%, -100%);
+    transform: translate(-1%, -100%);
   }
   footer {
     font-size: .8rem;
