@@ -160,6 +160,7 @@ img {
   height: auto;
   width: 25vw;
   border: 1px solid hsl(345, 100%, 32%);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   margin: 3rem;
   transition: border .5s ease;
 }
@@ -170,6 +171,7 @@ img {
 
 #logos {
   border: none;
+  box-shadow: none;
 }
 
 .portfolio-img {
@@ -334,6 +336,10 @@ ul {
   figure a:hover .img-title, figure a:hover::after {
     opacity: 0;
     transition: opacity .3s ease;
+  }
+  /* tiny hover effect on footer navbar elements */
+  .navbar li:hover {
+    transform: translateY(10%);
   }
 }
 
